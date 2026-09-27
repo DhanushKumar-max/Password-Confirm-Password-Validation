@@ -1,28 +1,136 @@
-🔐 Password & Confirm Password Validation
+# 🔐 Password & Confirm Password Validation
 
-A simple Angular project that demonstrates Password and Confirm Password validation using Reactive Forms.
+A simple Angular project demonstrating **Password and Confirm Password validation** using **Reactive Forms**.
 
-The project checks whether the password entered by the user matches the confirm password field and displays appropriate validation messages when the passwords do not match.
+The application checks whether the password entered by the user matches the confirm password and displays validation messages when the passwords are different.
 
-🚀 Features
-Password input field
-Confirm Password input field
-Password required validation
-Confirm Password required validation
-Password and Confirm Password matching validation
-Displays validation messages
-Form status validation
-Submit button validation
-Angular Reactive Forms
-Clean and simple user interface
-🛠️ Technologies Used
-Angular
-TypeScript
-HTML
-CSS
-Reactive Forms
-Angular Validators
-📂 Project Structure
+---
+
+## 🚀 Features
+
+* Password input field
+* Confirm Password input field
+* Required field validation
+* Password and Confirm Password matching validation
+* Password mismatch error message
+* Form validation
+* Submit button validation
+* Angular Reactive Forms
+* Simple and clean UI
+
+---
+
+## 🛠️ Technologies Used
+
+* Angular
+* TypeScript
+* HTML
+* CSS
+* Reactive Forms
+* Angular Validators
+
+---
+
+## 📋 Project Description
+
+Password and Confirm Password validation is commonly used in registration forms.
+
+In this project, the user enters a password and then enters the same password again in the **Confirm Password** field.
+
+The application compares both values.
+
+### Validation Flow
+
+**Password**
+
+↓
+
+**User enters password**
+
+↓
+
+**Confirm Password**
+
+↓
+
+**User enters password again**
+
+↓
+
+**Compare both passwords**
+
+↓
+
+**If both passwords are the same → Valid**
+
+**If passwords are different → Password Mismatch**
+
+---
+
+## ✅ Validation Conditions
+
+### 1. Password Required
+
+If the password field is empty, a required validation message is displayed.
+
+### 2. Confirm Password Required
+
+If the Confirm Password field is empty, a required validation message is displayed.
+
+### 3. Passwords Match
+
+Example:
+
+```text
+Password:         Dhanush@123
+Confirm Password: Dhanush@123
+```
+
+Result:
+
+```text
+Valid
+```
+
+### 4. Passwords Do Not Match
+
+Example:
+
+```text
+Password:         Dhanush@123
+Confirm Password: Dhanush@456
+```
+
+Result:
+
+```text
+Password Mismatch
+```
+
+---
+
+## 🧩 Angular Concepts Used
+
+This project demonstrates:
+
+* Components
+* Reactive Forms
+* FormGroup
+* FormControl
+* Validators
+* Form validation
+* Custom validation logic
+* `valueChanges`
+* `statusChanges`
+* Data binding
+* Event handling
+* Conditional validation messages
+
+---
+
+## 📂 Project Structure
+
+```text
 My-Practice/
 │
 ├── src/
@@ -43,145 +151,91 @@ My-Practice/
 ├── package-lock.json
 ├── tsconfig.json
 └── README.md
-📝 Project Description
+```
 
-Password validation is an important part of registration and login forms.
+---
 
-In this project, the user enters a password and then enters the same password again in the Confirm Password field.
+## 💻 Installation
 
-The application compares both values.
+### Clone the Repository
 
-Validation Logic
-Password
-    ↓
-User enters password
-    ↓
-Confirm Password
-    ↓
-User enters password again
-    ↓
-Compare both values
-    ↓
- ┌───────────────┐
- │ Are they same?│
- └───────┬───────┘
-         │
-    ┌────┴────┐
-    ↓         ↓
-   YES        NO
-    ↓         ↓
- Valid    Password
-          Mismatch
-✅ Validation Conditions
-1. Empty Password
-
-If the password field is empty, the application displays a required-field validation message.
-
-2. Empty Confirm Password
-
-If the confirm password field is empty, the application displays a required-field validation message.
-
-3. Matching Passwords
-
-If both fields contain the same password:
-
-Password:         Dhanush@123
-Confirm Password: Dhanush@123
-
-The validation is successful.
-
-4. Password Mismatch
-
-If the passwords are different:
-
-Password:         Dhanush@123
-Confirm Password: Dhanush@456
-
-The application displays a password mismatch error.
-
-🧩 Angular Concepts Used
-
-This project demonstrates the following Angular concepts:
-
-Components
-Reactive Forms
-FormGroup
-FormControl
-Validators
-Form validation
-Custom validation logic
-valueChanges
-statusChanges
-Data binding
-Event handling
-Conditional error messages
-📋 Example Form
-┌─────────────────────────────────┐
-│          Login Form             │
-│                                 │
-│ Password                        │
-│ ┌─────────────────────────────┐ │
-│ │ •••••••••••                 │ │
-│ └─────────────────────────────┘ │
-│                                 │
-│ Confirm Password                │
-│ ┌─────────────────────────────┐ │
-│ │ •••••••••••                 │ │
-│ └─────────────────────────────┘ │
-│                                 │
-│        [ Submit ]               │
-└─────────────────────────────────┘
-💻 Installation
-
-Clone the repository:
-
+```bash
 git clone https://github.com/DhanushKumar-max/Password-confirm-Password-Validation.git
+```
 
-Navigate to the project:
+### Navigate to the Project
 
+```bash
 cd Password-confirm-Password-Validation
+```
 
-Install dependencies:
+### Install Dependencies
 
+```bash
 npm install
-▶️ Run the Application
+```
+
+---
+
+## ▶️ Run the Application
 
 Start the Angular development server:
 
+```bash
 ng serve
+```
 
-Open your browser and visit:
+Open the application in your browser:
 
+```text
 http://localhost:4200/
-🎯 Learning Objective
+```
 
-The main objective of this project is to understand how Angular Reactive Forms can be used to:
+---
 
-Create form controls.
-Apply validators.
-Validate user input.
-Compare two form fields.
-Display validation messages.
-Check form status before submission.
-🔮 Future Improvements
+## 🎯 Learning Objective
+
+The main objective of this project is to understand how **Angular Reactive Forms** are used for form validation.
+
+Through this project, I learned how to:
+
+1. Create Reactive Forms.
+2. Create FormControls and FormGroups.
+3. Apply Angular validators.
+4. Validate user input.
+5. Compare Password and Confirm Password fields.
+6. Display validation error messages.
+7. Check form validity before submission.
+8. Work with `valueChanges` and `statusChanges`.
+
+---
+
+## 🔮 Future Improvements
 
 The project can be extended with:
 
-Password strength validation
-Show/Hide password functionality
-Email validation
-Username validation
-Confirm email validation
-Registration form
-Login authentication
-API integration
-JWT authentication
-👨‍💻 Author
+* Password strength validation
+* Show/Hide password functionality
+* Email validation
+* Username validation
+* Confirm Email validation
+* Complete Registration Form
+* Login Authentication
+* API Integration
+* JWT Authentication
 
-Dhanush Kumar
+---
 
-Frontend Developer | Angular | TypeScript | JavaScript | HTML | CSS
+## 👨‍💻 Author
 
-📄 License
+**Dhanush Kumar**
 
-This project is created for learning and practice purposes.
+Frontend Developer
+
+**Skills:** HTML | CSS | JavaScript | Angular | TypeScript
+
+---
+
+## 📄 License
+
+This project is created for **learning and practice purposes**.
