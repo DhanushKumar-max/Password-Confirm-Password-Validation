@@ -1,0 +1,57 @@
+<section class="flex justify-center items-center min-h-screen bg-slate-700">
+  <form class="flex flex-col gap-4 w-80 bg-slate-200 p-6 rounded" [formGroup]="LoginForm">
+    <h1 class="text-xl font-bold text-center">Login Form</h1>
+    <input
+      type="text"
+      formControlName="username"
+      placeholder="Username"
+      class="border-2 p-2 rounded"
+    />
+
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Enter your Password"
+      class="border-2 p-2 rounded" (input)="checkpassword()"
+    />
+    @if (
+    LoginForm.get('password')?.touched &&
+    LoginForm.get('password')?.hasError('required')
+  ) {
+    <p class="text-red-600">Password is required</p>
+  }
+
+    <input
+      type="password"
+      formControlName="confirmPassword"
+      placeholder="Confirm your Password"
+      class="border-2 p-2 rounded"
+    />
+    @if (
+    LoginForm.get('confirmPassword')?.touched &&
+    LoginForm.get('confirmPassword')?.hasError('required')
+  ) {
+    <p class="text-red-700">Confirm password is required</p>
+  }
+
+  @if (
+    LoginForm.get('confirmPassword')?.touched &&
+    LoginForm.hasError('passwordMismatch')
+  ) {
+    <p class="text-red-500">Confirm password is not matched</p>
+  }
+
+  @if (
+    LoginForm.get('confirmPassword')?.touched &&
+    !LoginForm.hasError('passwordMismatch') &&
+    LoginForm.get('confirmPassword')?.value
+  ) {
+    <p class="text-red-700">Password matched</p>
+  }
+
+    <button type="submit" class="bg-black text-white p-2 rounded" (click)="Onsubmit()">Login</button>
+  </form>
+
+   
+
+</section>
